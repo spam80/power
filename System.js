@@ -350,7 +350,7 @@ client.on('message', message => {
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`**حياك في سيرفرنا 
-  https://discord.gg/YhNsnT 🌹 **`) 
+https://discord.gg/SJsYw9s 🌹 **`) 
 }).catch(console.error)
 })
 client.on('message', message => {
