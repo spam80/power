@@ -80,7 +80,7 @@ client.on("message", message => {
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('SPEAK')) return message.reply('⚠ | **ليس لديك صلاحيات**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **ليس لديك صلاحيات**');
         var msg;
         msg = parseInt();
       
@@ -1039,8 +1039,8 @@ client.on('message', message => {
     command = command.slice(prefix.length);
     if (command == "role") {
     if (!message.channel.guild) return;
-    if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.reply("**:no_entry_sign:انت لا تملك صلاحيات **").then(msg => msg.delete(5000));;
-    if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
+    if(!message.guild.member(message.author).hasPermission("SPEAK")) return message.reply("**:no_entry_sign:انت لا تملك صلاحيات **").then(msg => msg.delete(5000));;
+    if(!message.guild.member(client.user).hasPermission("SPEAK")) return message.reply("البوت لايملك صلاحيات ").then(msg => msg.delete(5000));;
     let user = message.mentions.users.first();
     if (message.mentions.users.size < 1) return message.reply('**ضع منشن الشخص!!**').then(msg => {msg.delete(5000)});
     let MRole = message.content.split(" ").slice(2).join(" ");
