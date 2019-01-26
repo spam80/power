@@ -80,7 +80,7 @@ client.on("message", message => {
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('SPEAK')) return message.reply('⚠ | **ليس لديك صلاحيات**');
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **ليس لديك صلاحيات**');
         var msg;
         msg = parseInt();
       
